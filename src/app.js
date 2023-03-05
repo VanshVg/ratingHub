@@ -14,9 +14,7 @@ app.set("views", "views");
 
 hbs.registerPartials("views/partials");
 
-mongoose.connect("mongodb://localhost:27017/ratingHub", async () => {
-  console.log("Database is connected");
-});
+mongoose.connect("mongodb://127.0.0.1:27017/ratingHub");
 
 const PORT = process.env.PORT || 4000;
 

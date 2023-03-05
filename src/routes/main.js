@@ -1,35 +1,16 @@
 const express = require("express");
 
 const reviewModel = require("../models/reviewModel");
+const controller = require("../controllers/controller");
 
 const router = express.Router();
 
-router.get("/", (req, resp) => {
-  resp.render("index");
-});
-
-router.get("/movies", (req, resp) => {
-  resp.render("movies");
-});
-
-router.get("/animes", (req, resp) => {
-  resp.render("animes");
-});
-
-router.get("/webseries", (req, resp) => {
-  resp.render("webseries");
-});
-
-router.get("/sitcoms", (req, resp) => {
-  resp.render("sitcoms");
-});
-
-router.get("/games", (req, resp) => {
-  resp.render("games");
-});
-
-router.get("/review", (req, resp) => {
-  resp.render("review");
-});
+router.get("/", controller.homepage);
+router.get("/movies", controller.moviepage);
+router.get("/animes", controller.animepage);
+router.get("/webseries", controller.webseriespage);
+router.get("/sitcoms", controller.sitcomspage);
+router.get("/games", controller.gamespage);
+router.get("/review/:id", controller.reviewpage);
 
 module.exports = router;
