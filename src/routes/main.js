@@ -1,6 +1,5 @@
 const express = require("express");
 
-const reviewModel = require("../models/reviewModel");
 const controller = require("../controllers/controller");
 
 const router = express.Router();
@@ -12,5 +11,6 @@ router.get("/webseries", controller.webseriespage);
 router.get("/sitcoms", controller.sitcomspage);
 router.get("/games", controller.gamespage);
 router.get("/review/:id", controller.reviewpage);
+router.post("/add", controller.add);
 
 module.exports = router;
