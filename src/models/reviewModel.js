@@ -22,6 +22,4 @@ const reviewSchema = new Schema({
   reviews: [userSchema],
 });
 
-let movieModel = mongoose.model("movies", reviewSchema);
-
-module.exports = movieModel;
+module.exports = mongoose.model("datas", reviewSchema);

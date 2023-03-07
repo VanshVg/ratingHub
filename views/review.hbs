@@ -1,16 +1,26 @@
+<title>Rating Hub/{{review.name}}</title>
+<link
+  rel="icon"
+  href="/static/images/logo/logo1.png"
+  height="80px"
+  width="110px"
+  type="image/x-icon"
+/>
 <body style="background-color:#2f383f">
   <div class="review">
     <div>
-      <img src={{review.pictureUrl}} style="float:right" height="180px" />
-    </div>
-    <div>
-      <h1
-        class="display-4"
-        align="center"
-        style="color: white; font-size:40px"
-      >{{review.name}}</h1>
-      <h1 style="color:white">PLOT</h1>
-      <p style="color: white; font-size:20px; ">{{review.plot}}</p>
+      <div align="right">
+        <img src={{review.pictureUrl}} style="float:right" height="180px" />
+      </div>
+      <div align="left">
+        <h1
+          class="display-4"
+          align="center"
+          style="color: white; font-size:40px"
+        >{{review.name}}</h1>
+        <h1 style="color:white">PLOT</h1>
+        <p style="color: white; font-size:20px; ">{{review.plot}}</p>
+      </div>
     </div>
     <hr style="height:2px;border-width:0;color:gray;background-color:black" />
     <h1 style="color:white">CAST</h1>

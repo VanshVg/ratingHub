@@ -1,4 +1,4 @@
-const movieModel = require("../models/reviewModel");
+const reviewModel = require("../models/reviewModel");
 
 const homepage = (req, resp) => {
   resp.render("index");
@@ -26,7 +26,7 @@ const gamespage = (req, resp) => {
 
 const reviewpage = async (req, resp) => {
   let Id = req.params.id;
-  let review = await movieModel.findOne({ id: Id });
+  let review = await reviewModel.findOne({ id: Id });
   console.log(review);
   resp.render("review", {
     review: review,
@@ -35,7 +35,7 @@ const reviewpage = async (req, resp) => {
 
 const add = async (req, resp) => {
   console.log("Req.Body------", req.body);
-  let data = new movieModel({
+  let data = new reviewModel({
     id: req.body.id,
     name: req.body.name,
     pictureUrl: req.body.pictureUrl,
