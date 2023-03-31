@@ -24,6 +24,14 @@ const gamespage = (req, resp) => {
   resp.render("games");
 };
 
+const signupPage = (req, resp) => {
+  resp.render("signup");
+};
+
+const loginPage = (req, resp) => {
+  resp.render("login");
+};
+
 const reviewpage = async (req, resp) => {
   let Id = req.params.id;
   let review = await reviewModel.findOne({ id: Id });
@@ -59,5 +67,7 @@ module.exports = {
   sitcomspage,
   gamespage,
   reviewpage,
+  signupPage,
+  loginPage,
   add,
 };
